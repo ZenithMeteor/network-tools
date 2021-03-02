@@ -1,7 +1,7 @@
-Expect script – Read / write file
+# Expect script – Read / write file
 Thanks to this source : http://wiki.tcl.tk/367
 
-To read data from a file in an Expect script:
+## To read data from a file in an Expect script:
 ```
 #!/usr/bin/expect -f
  
@@ -15,7 +15,7 @@ foreach line $data {
 puts "$line\r" 
 }
 ```
-# And to write data to a file:
+## And to write data to a file:
 ```
 #!/usr/bin/expect -f
  
