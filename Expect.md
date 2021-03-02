@@ -11,12 +11,10 @@ set data [read $fp]
 
 # Read line by line
 
-foreach line $data {
- 
-puts "$line\r"
- 
+foreach line $data { 
+puts "$line\r" 
 }
-
+```
 # And to write data to a file:
 ```
 #!/usr/bin/expect -f
