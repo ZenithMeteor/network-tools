@@ -2,6 +2,8 @@
 
 https://gitee.com/heguangchuan/rainmeter/blob/master/07-mongodb.md
 
+https://chentsungyu.github.io/2019/09/12/Python/%5BPython%5D%20MongoDB%20%E8%B3%87%E6%96%99%E6%93%8D%E4%BD%9C/
+
 安装
 上传压缩包到Linux中，解压
 
