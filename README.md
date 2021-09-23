@@ -58,3 +58,30 @@ db.shutdownServer()
 rm -f  /usr/local/mongodb/data/*.lock
 修复数据
 /usr/local/mongdb/bin/mongod --repair --dbpath=/usr/local/mongodb/data
+
+
+------------------
+java -version
+Our output will be similar to:
+
+openjdk version “1.8.0_191”
+----------------------------
+https://www.elastic.co/guide/cn/elasticsearch/guide/current/running-elasticsearch.html
+https://medium.com/@geniojay/graylog-server-%E5%AE%89%E8%A3%9D%E7%AF%87-%E4%B8%80-3144a94090da
+
+編輯相關設定
+#vim /etc/elasticsearch/elasticsearch.yml
+修改cluster設定
+cluster.name: graylog
+修改IP和port
+network.host: 192.168.1.2 (自己的IP)
+http.port: 9200
+------------------
+https://packages.graylog2.org/packages
+https://www.graylog.org/downloads-2
+https://docs.graylog.org/en/4.1/pages/installation/manual_setup.html
+*** https://www.codenong.com/cs107091470/
+https://blog.csdn.net/abu935009066/article/details/119024223
+rpm -ivh graylog-4.1-repository_latest.rpm
+
+PdJ670sinGo3XZD68YC0eF50oRs9szcCjKkCckkiifENGpVX8miwuiBbBsOjSjmO
