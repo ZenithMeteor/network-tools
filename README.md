@@ -85,3 +85,8 @@ https://blog.csdn.net/abu935009066/article/details/119024223
 rpm -ivh graylog-4.1-repository_latest.rpm
 
 PdJ670sinGo3XZD68YC0eF50oRs9szcCjKkCckkiifENGpVX8miwuiBbBsOjSjmO
+
+【Flask 教學】實作 GCP 部署 Flask + Nginx + uWSGI
+https://www.maxlist.xyz/2020/06/17/flask-nginx-uwsgi-on-gcp/
+Flask想上線? 你還需要一些酷東西
+https://minglunwu.github.io/notes/2021/flask_plus_wsgi.html#0
