@@ -90,3 +90,6 @@ PdJ670sinGo3XZD68YC0eF50oRs9szcCjKkCckkiifENGpVX8miwuiBbBsOjSjmO
 https://www.maxlist.xyz/2020/06/17/flask-nginx-uwsgi-on-gcp/
 Flask想上線? 你還需要一些酷東西
 https://minglunwu.github.io/notes/2021/flask_plus_wsgi.html#0
+
+app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hour=2)在兩個小時後過期
+app.config['PERMANENT_SESSION_LIFETIME'] = 7200  # 失效時間 秒
