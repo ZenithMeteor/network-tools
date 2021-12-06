@@ -95,3 +95,6 @@ app.config['PERMANENT_SESSION_LIFETIME'] = timedelta(hour=2)在兩個小時後�
 app.config['PERMANENT_SESSION_LIFETIME'] = 7200  # 失效時間 秒
 
 核心的关键库就是pyautogui，其实如果只是浏览器点赞的话，用selenium就够了，用这个的话不会占用鼠标和键盘事件，还可以继续用电脑干其他事。
+
+setInterval(func, ms) 1000=1s
+onload()
