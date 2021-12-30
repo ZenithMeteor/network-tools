@@ -99,6 +99,6 @@ app.config['PERMANENT_SESSION_LIFETIME'] = 7200  # 失效時間 秒
 setInterval(func, ms) 1000=1s
 onload()
 
-####
+------------------
 
 PROMPT = ['.*>\s*','.*#\s*','Password: ']
