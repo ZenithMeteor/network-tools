@@ -102,3 +102,16 @@ onload()
 ------------------
 
 PROMPT = ['.*>\s*','.*#\s*','Password: ']
+
+--------------------
+http://xstarcd.github.io/wiki/Python/python_subprocess_study.html
+https://blog.csdn.net/imzoer/article/details/8678029
+如果你想一行行处理子进程的输出，也没有问题：
+p=subprocess.Popen("dir", shell=True, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)  
+while True:  
+    buff = p.stdout.readline()  
+    if buff == '' and p.poll() != None:  
+        break 
+
+https://blog.csdn.net/whatday/article/details/96478966
+https://medium.com/@alan81920/python-%E5%91%BC%E5%8F%AB%E5%85%B6%E4%BB%96%E7%A8%8B%E5%BC%8F-18a202c8b700
