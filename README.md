@@ -114,4 +114,7 @@ while True:
         break 
 
 https://blog.csdn.net/whatday/article/details/96478966
+
 https://medium.com/@alan81920/python-%E5%91%BC%E5%8F%AB%E5%85%B6%E4%BB%96%E7%A8%8B%E5%BC%8F-18a202c8b700
+
+https://github.com/hannbal/autoworker
