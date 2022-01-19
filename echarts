@@ -1,0 +1,600 @@
+option = {
+    title: {
+        text: '关系图（数据为虚构）',
+        subtext: '卖山楂啦prss',
+        textStyle: {
+				color: '#000',
+				fontSize: 20,
+			},
+      },
+    tooltip: {
+        trigger: 'item',
+        formatter: function(x) {
+            return x.data.label; //设置提示框的内容和格式 节点和边都显示name属性
+        },
+    },
+    toolbox: {
+            show: true,
+            feature: {
+                dataView: {show:true},
+                saveAsImage: {
+                    //excludeComponents :['toolbox'],
+                    pixelRatio: 5
+                }
+            }
+        },
+    animationDurationUpdate: 1500,
+    animationEasingUpdate: 'quinticInOut',
+    series: [
+        {
+        type: 'graph',
+        layout: 'force', // 'circular' ,force
+        symbolSize: 3, //图形的大小（示例中的圆的大小）
+        roam: true, //鼠标缩放及平移
+        focusNodeAdjacency: true, //是否在鼠标移到节点上的时候突出显示节点、节点的边和邻接节点
+ 
+ 
+        //力引导布局相关的配置项
+        //通过修改layout属性，分别绘制一个力引导图和一个圆形的图。
+        // 'circular' ,force
+        circular: {
+            x: 'center',
+            y: '50px',
+            edgeLength: 280,//线的长度，这个距离也会受 repulsion，支持设置成数组表达边长的范围
+           gravity:0.02,//节点受到的向中心的引力因子。该值越大节点越往中心点靠拢。
+            //repulsion 节点之间的斥力因子，这项可以设置为数组形式，不同大小的值会线性映射到不同的斥力，值越大则斥力越大。
+            //repulsion: 8000//节点之间的斥力因子。值越大则斥力越大
+            //initLayout：进行力引导布局前的初始化布局，初始化布局会影响到力引导的效果。
+            
+        },
+        //     edgeSymbol: ['circle', 'arrow'],//箭头
+        //    edgeSymbolSize: [6, 10],
+       
+        data: [ //节点数据
+            {
+                name: '猪八戒',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '猪八戒',
+                symbolSize: 18,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },}, //猪八戒
+            {
+                name: '后裔',
+                label: '',
+                draggable: true, //能否鼠标拖动
+               category: '后裔',
+                symbolSize: 17,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: 'right',
+                        fontSize: 15,
+                        color: 'black',
+                    },
+                },},//后裔
+            {
+                name: '铁扇公主',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '铁扇公主',
+                symbolSize: 10,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },},//铁扇公主
+            {
+                name: '牛魔王',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '牛魔王',
+                symbolSize: 14,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },},//牛魔王
+            {
+                name: '女儿国国王',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '女儿国国王',
+                symbolSize: 9,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//女儿国国王
+            {
+                name: '蝎子精',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '蝎子精',
+                symbolSize: 8,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//蝎子精
+            {
+                name: '孔雀公主',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '孔雀公主',
+                symbolSize: 13,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//孔雀公主
+            {
+                name: '大鹏',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '大鹏',
+                symbolSize: 16,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//大鹏
+            {
+                name: '玉免精',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '玉免精',
+                symbolSize: 11,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//玉免精
+            {
+                name: '唐僧',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '唐僧',
+                symbolSize: 19,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//唐僧
+            {
+                name: '王母娘娘',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '王母娘娘',
+                symbolSize: 11,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//王母娘娘
+            {
+                name: '玉皇太帝',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '玉皇太帝',
+                symbolSize: 5,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//玉皇太帝
+            {
+                name: '玉面狐狸',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '玉面狐狸',
+                symbolSize: 13,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//玉面狐狸
+            {
+                name: '高老庄老婆',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '高老庄老婆',
+                symbolSize: 10,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//高老庄老婆
+            {
+                name: '嫦娥',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '嫦娥',
+                symbolSize: 13,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//嫦娥
+            {
+                name: '观音',
+                label: '',
+                draggable: true, //能否鼠标拖动
+                category: '观音',
+                symbolSize: 16,
+                label: {
+                    normal: {
+                        show: true, //控制非高亮时节点名称是否显示
+                        position: '',
+                        fontSize: 20,
+                        color: 'black',
+                    },
+                },
+            },//观音
+        ],
+
+
+		links: [    //连线数据
+				{ 
+                source:'猪八戒',
+                target:'嫦娥',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:15,
+					color:'red',//设置为’source’时是与起点颜色相同，’target’是与终点颜色相同。
+					curveness: 0.,	//边的曲度，支持从 0 到 1 的值，值越大曲度越大，也可设置为直线
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//猪八戒--嫦娥
+				{ 
+                source:'嫦娥',
+                target:'猪八戒',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:15,
+					color:'red',//设置为’source’时是与起点颜色相同，’target’是与终点颜色相同。
+					curveness: 0.,	//边的曲度，支持从 0 到 1 的值，值越大曲度越大，也可设置为直线
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//猪八戒--嫦娥
+				{ 
+                source:'猪八戒',
+                target:'高老庄老婆',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:15,
+					color:'target',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.6', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//猪八戒--高老庄老婆
+				{ 
+                source:'猪八戒',
+                target:'观音',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:8,
+					color:'target',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.8', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//猪八戒--观音
+				{ 
+                source:'后裔',
+                target:'嫦娥',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:11,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.6', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//后裔--嫦娥
+				{ 
+                source:'铁扇公主',
+                target:'牛魔王',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:10,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//铁扇公主--牛魔王
+				{ 
+                source:'牛魔王',
+                target:'玉面狐狸',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:6,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//牛魔王--玉面狐狸
+				{ 
+                source:'女儿国国王',
+                target:'唐僧',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:22,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.6', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//女儿国国王--唐僧
+				{ 
+                source:'蝎子精',
+                target:'唐僧',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:11,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				
+            },//蝎子精--唐僧
+                { 
+                source:'孔雀公主',
+                target:'唐僧',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:16,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//孔雀公主--唐僧
+				{ 
+                source:'大鹏',
+                target:'唐僧',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:5,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//大鹏--唐僧
+				{ 
+                source:'玉免精',
+                target:'唐僧',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:10,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.6', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//玉免精--唐僧
+				{ 
+                source:'唐僧',
+                target:'观音',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:1,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.4', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				
+            },//唐僧--观音
+				{ 
+                source:'王母娘娘',
+                target:'玉皇太帝',				
+				value:'',
+				label:'',								
+                lineStyle: {
+                normal: {
+					show:true,
+                    width:1,
+					color:'source',
+					curveness: 0.2,	
+					type :'solid', //线的类型 'solid'（实线）'dashed'（虚线）'dotted'（点线）
+					opacity :'0.8', 
+                        // 图形透明度。支持从 0 到 1 的数字，为 0 时不绘制该图形。默认0.5
+                    },
+                }
+				},//王母娘娘--玉皇太帝
+            ],
+
+        categories: [ //节点数据			
+            {
+                name: '猪八戒',
+                icon: 'circle'
+            },
+            {
+                name: '嫦娥',
+                icon: 'circle'},
+            {
+                name: '后裔',
+                icon: 'circle'},
+            {
+                name: '铁扇公主',
+                icon: 'circle',
+},
+            {
+                name: '牛魔王',
+                icon: 'circle'
+            },
+            {
+                name: '女儿国国王',
+                icon: 'circle'
+            },
+            {
+                name: '蝎子精',
+                icon: 'circle'
+            },
+            {
+                name: '孔雀公主',
+                icon: 'circle'
+            },
+            {
+                name: '大鹏',
+                icon: 'circle'
+            },
+            {
+                name: '玉免精',
+                icon: 'circle'
+            },
+            {
+                name: '唐僧',
+                icon: 'circle'
+            },
+            {
+                name: '王母娘娘',
+                icon: 'circle'
+            },
+            {
+                name: '玉皇太帝',
+                icon: 'circle'
+            },
+            {
+                name: '玉面狐狸',
+                icon: 'circle'
+            },
+            {
+                name: '高老庄老婆',
+                icon: 'circle'
+            },
+            {
+                name: '观音',
+                icon: 'circle'
+            },],}
+    ]
+};
