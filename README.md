@@ -125,3 +125,7 @@ https://github.com/hannbal/autoworker
 def inject_user():
     return dict(user=g.user)
 ```
+
+## Terminal cool text
+
+http://www.patorjk.com/software/taag/​
