@@ -129,3 +129,7 @@ def inject_user():
 ## Terminal cool text
 
 http://www.patorjk.com/software/taag/​
+
+## basic auth
+
+https://stackoverflow.com/questions/26745462/how-do-i-use-basic-http-authentication-with-the-python-requests-library
